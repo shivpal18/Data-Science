@@ -31,12 +31,17 @@
 
 
 # else statement in for loop
-for i in range(1,21):
-    if i ==156:
-        print("break statement is exucuted")
-        break
-    print(i)
-else:
-    print("break statement is not executed")
+# for i in range(1,21):
+#     if i ==156:
+#         print("break statement is exucuted")
+#         break
+#     print(i)
+# else:
+#     print("break statement is not executed")
 
 
+# while loop
+a=1
+while a <= 30:
+    print(a)
+    a = a+1
