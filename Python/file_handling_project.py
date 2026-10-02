@@ -1,11 +1,10 @@
 from pathlib import Path
-import os
 
 def readfileandfolder():
     path = Path('')
     items = list(path.glob('*'))
-    for i, items in enumerate(items):
-        print(f"{i+1} : {items}")
+    for i, item in enumerate(items):
+        print(f"{i+1} : {item}")
 
 def createfile():
     try:
@@ -33,7 +32,7 @@ def readfile():
             with open(p, 'r') as fs:
                 data = fs.read()
                 print(data)
-            print("readed successfully")
+            print("READ SUCCESSFULLY")
         else :
             print("the file does not exist")
     except Exception as err:
@@ -55,19 +54,25 @@ def updatefile():
                 name2 = input("tell your new file name:")
                 p2 = Path(name2)
                 p.rename(p2)
+                print("FILE RENAMED SUCCESSFULLY")
 
-            if res == 2:
+            elif res == 2:
                 with open(p, 'w') as fs:
                     data = input("tell what you want to write, this is overwrite the data: ")
                     fs.write(data)
+                print("FILE UPDATED SUCCESSFULLY")
 
-            if res == 3:
+            elif res == 3:
                 with open(p, 'a') as fs:
-                    data = input("tell what you nat to append: ")
+                    data = input("tell what you want to append: ")
                     fs.write(" "+data)
+                print("CONTENT APPENDED SUCCESSFULLY")
+
+            else:
+                print("INVALID RESPONSE")
 
     except Exception as err:
-        print("an error occured as {err}")
+        print(f"an error occured as {err}")
 
 def deletefile():
     try:
@@ -76,8 +81,8 @@ def deletefile():
         p = Path(name)
 
         if p.exists() and p.is_file():
-            os.remove(name)
-            print("file removes successfully")
+            p.unlink()
+            print("file removed successfully")
         else:
             print("no such file exist")
 
