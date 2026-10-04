@@ -1,3 +1,4 @@
+
 # DECORATOR
 
 # class Animal:
@@ -116,5 +117,93 @@
 
 
 
-from maths import addition
-print(addition(12,14))
+# from maths import addition
+# print(addition(12,14))
+
+
+
+# ITERATOR & GENERATORS
+
+# def gen(n):
+#     for i in range(n):
+#         yield i
+
+# print(gen(10000))
+# for i in gen(100):
+#     print(i)
+
+
+
+# def gen(n):
+#     for i in range(n):
+#         yield i
+
+# ob1 = gen(4)
+# print(next(ob1))
+# print(next(ob1))
+
+
+
+# ZIP FUNCTION
+
+# l = [10,20,30,40]
+# l1 = [1,2,3,4]
+
+# for a,b in zip(l,l1):
+#     print(a,b)
+
+
+
+# ANY & ALL FUNCTION
+
+# numbers = [False, False, True, False]
+# print(any(numbers))
+
+# numbers = [False, False, False]
+# print(any(numbers))
+
+# numbers = [True, True, True]
+# print(all(numbers))
+
+# numbers = [True, True, False, True]
+# print(all(numbers))
+
+
+
+# REGULAR EXPRESSION
+
+import re
+
+# text = "My phone number is 7607812407"
+# result = re.search(r"\d+", text)
+# print(result.group())
+
+
+
+# text = "I have 123 apples and 456 oranges"
+# numbers = re.findall(r"\d+", text)
+# print(numbers)
+
+
+
+# text = "Contact me at abc@gmail.com"
+# pattern = r"[\w.-]+@[\w.-]+\.\w+"
+# result = re.findall(pattern, text)
+# print(result)
+
+
+
+# text = "My phone number is 7607812407"
+# result = re.sub(r"\d", "*", text)
+# print(result)
+
+
+
+text = """
+My name is Shivpal.
+My age is 21.
+My phone is 7607812407.
+My marks are 85.
+"""
+numbers = re.findall(r"\d+", text)
+print(numbers)
