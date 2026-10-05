@@ -172,7 +172,7 @@
 
 # REGULAR EXPRESSION
 
-import re
+# import re
 
 # text = "My phone number is 7607812407"
 # result = re.search(r"\d+", text)
@@ -199,11 +199,11 @@ import re
 
 
 
-text = """
-My name is Shivpal.
-My age is 21.
-My phone is 7607812407.
-My marks are 85.
-"""
-numbers = re.findall(r"\d+", text)
-print(numbers)
+# text = """
+# My name is Shivpal.
+# My age is 21.
+# My phone is 7607812407.
+# My marks are 85.
+# """
+# numbers = re.findall(r"\d+", text)
+# print(numbers)
