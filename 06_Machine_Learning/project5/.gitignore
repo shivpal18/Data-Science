@@ -1,0 +1,12 @@
+# Large ML model file
+similarity.pkl
+
+# Streamlit secrets - never upload API keys
+.streamlit/secrets.toml
+
+# Python cache files
+__pycache__/
+*.py[cod]
+
+# Environment variables
+.env
