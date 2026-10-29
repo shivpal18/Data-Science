@@ -18,17 +18,13 @@ def fetch_poster(movie_id):
             response = requests.get(url, params=params, timeout=20)
             response.raise_for_status()
             data = response.json()
-
             poster_path = data.get("poster_path")
-
             if poster_path:
                 return (
                     "https://image.tmdb.org/t/p/w500"
                     + poster_path
                 )
-
             return None
-
         except requests.exceptions.RequestException:
             if attempt == 2:
                 return None
